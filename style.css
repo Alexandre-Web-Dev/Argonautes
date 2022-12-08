@@ -1,0 +1,237 @@
+/* DESK FIRST */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*! SETTINGS */
+.border {
+  border: yellowgreen 1px solid;
+}
+
+:root {
+  --c1: #f76c6c;
+  --c1-2: rgb(191, 58, 65);
+  --c2: #f4f4f4;
+  --c3: #e0dfe0;
+  --c4: rgb(67, 67, 67);
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.max-width {
+  max-width: 1500px;
+  width: 100%;
+}
+
+.off {
+  display: none;
+}
+/* end off SETTINGS */
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/*! HEADER */
+
+header {
+  background-color: var(--c1);
+  background-image: url(https://argo.wildcodeschool.com/static/media/pattern.46b344ba.svg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 240px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTAINER IN HEADER */
+.container-header {
+  height: 100%;
+  line-height: 0.5;
+}
+
+.container-header img {
+  max-width: 150px;
+  max-height: 50px;
+}
+
+h1 {
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/*! MAIN */
+
+main {
+  background-color: var(--c2);
+  position: relative;
+  padding: 275px 15px 50px;
+}
+
+/* FIRST CONTAINER */
+.container {
+  background-color: #fff;
+  border: 1px solid #e0dfe0;
+  border-radius: 5px;
+  width: 450px;
+  padding: 60px 30px 30px;
+  position: absolute;
+  top: -75px;
+}
+
+.container h2 {
+  margin-bottom: 60px;
+  color: var(--c4);
+  font-size: 27.5px;
+}
+
+.container .input {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.input span {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: gray;
+}
+
+.container input {
+  padding: 15px;
+  margin-bottom: 30px;
+  width: 100%;
+  border: 1px solid var(--c3);
+  border-radius: 5px;
+  outline: none;
+  transition: all ease 0.1s;
+}
+
+.container input:hover {
+  border: 1px solid var(--c1);
+}
+
+.container input:focus {
+  border: 1px solid var(--c1-2);
+  outline: 1px solid var(--c1-2);
+}
+
+/* BTN 'ENVOYER' */
+#save {
+  padding: 15px 30px;
+  width: 100%;
+  font-size: 15px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--c1);
+  color: white;
+  transition: all ease 0.3s;
+}
+
+#save:hover {
+  cursor: pointer;
+  background-color: var(--c1-2);
+  transform: scale(1.025);
+  transition: all ease 0.3s;
+}
+
+/* SECOND CONTAINER */
+.container-table {
+  padding: 30px 0;
+}
+
+.container-table h2 {
+  margin: 30px 0;
+  color: var(--c4);
+}
+
+.settings {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+#wrapper button {
+  background-color: transparent;
+  border: none;
+  color: var(--c1);
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+#wrapper button:hover {
+  color: var(--c1-2);
+  transition: all ease 0.2s;
+}
+
+#wrapper button:active {
+  animation: rotation 0.4s;
+}
+
+/* BTN'S ANIMATION */
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+footer {
+  padding: 25px;
+  background: #fff;
+  text-align: center;
+}
+
+/*! MEDIA QUERIES */
+
+@media screen and (max-width: 1500px) {
+  .container-table {
+    padding: 30px 75px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  header {
+    height: auto;
+  }
+
+  main {
+    padding-top: 300px;
+  }
+  .container {
+    top: 0px;
+    width: 100%;
+  }
+
+  .container h2 {
+    margin-bottom: 30px;
+  }
+
+  .container-table {
+    padding: 15px;
+  }
+}
